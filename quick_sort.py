@@ -66,8 +66,9 @@ print("\n","-"*70,"\n")
 size = int(input("Enter the size of the list: "))
 my_list = []
 for i in range(size):
-    my_list.append(int(input(f"Enter the element at position {i + 1}: ")))
-    
+    my_list.append(int(input(f"Enter the element at position {i}: ")))
+
+print("\n","-"*70,"\n")   
 print("Original List:", *my_list)
 
 quick_sort(my_list, 0, len(my_list)-1)
