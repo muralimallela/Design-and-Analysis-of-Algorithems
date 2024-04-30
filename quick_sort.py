@@ -1,5 +1,3 @@
-
-
 # Swapping
 def swap(arr, i, j):
     print(f"\n{arr[i]} and {arr[j]} are swapped.")
@@ -47,8 +45,6 @@ def partition(arr, low, high):
 
 # Performing Quick sort
 def quick_sort(arr, low, high):
-    
-    
     if low < high:
         print("\n","*"*70,"\n")
         print("Performing quick sort on list = ",*arr[low:high+1],f" with low = {low} and high = {high}")
