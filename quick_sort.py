@@ -2,12 +2,8 @@
 
 # Swapping
 def swap(arr, i, j):
-    # print("\n","~"*50,"\n")
-    # print("Before swapping list : " , *arr)
     print(f"\n{arr[i]} and {arr[j]} are swapped.")
     arr[i], arr[j] = arr[j], arr[i]
-    # print("After swapping list : ", *arr)
-    # print("\n","~"*50,"\n")
     
 
 # Performing Partitioning   
@@ -46,7 +42,6 @@ def partition(arr, low, high):
     print("\nBefore swapping list : " , *arr[low:high+1])
     swap(arr, low, right)
     print("\nAfter swapping list : ", *arr[low:high+1])
-    # print(f"Returning the pivot position i.e., {right}")
     print("\n","."*70)
     return right
 
@@ -74,6 +69,7 @@ def quick_sort(arr, low, high):
     
 
 print("\n","-"*70,"\n")
+
 # Taking the list from the user
 # print("\n","."*50,"\n")
 size = int(input("Enter the size of the list: "))
