@@ -55,22 +55,23 @@ def quick_sort(arr, low, high):
         quick_sort(arr, low, pivot-1)
         quick_sort(arr, pivot+1, high)
     
+    
+if __name__ == "__main__":
+    print("\n","-"*70,"\n")
 
-print("\n","-"*70,"\n")
+    # Taking the list from the user
+    size = int(input("Enter the size of the list: "))
+    my_list = []
+    for i in range(size):
+        my_list.append(int(input(f"Enter the element at position {i}: ")))
 
-# Taking the list from the user
-size = int(input("Enter the size of the list: "))
-my_list = []
-for i in range(size):
-    my_list.append(int(input(f"Enter the element at position {i}: ")))
+    print("\n","-"*70,"\n")   
+    print("Original List:", *my_list)
 
-print("\n","-"*70,"\n")   
-print("Original List:", *my_list)
+    quick_sort(my_list, 0, len(my_list)-1)
 
-quick_sort(my_list, 0, len(my_list)-1)
+    print("\n","-"*70,"\n")
 
-print("\n","-"*70,"\n")
+    print("Finally, \nSorted List:", *my_list)
 
-print("Finally, \nSorted List:", *my_list)
-
-print("\n","*"*70,"\n\t\t\tMURALI KRISHNA MALLELA\n","*"*70)
+    print("\n","*"*70,"\n\t\t\tMURALI KRISHNA MALLELA\n","*"*70)
