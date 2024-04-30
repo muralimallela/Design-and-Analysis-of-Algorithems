@@ -52,32 +52,26 @@ def quick_sort(arr, low, high):
     if low < high:
         print("\n","*"*70,"\n")
         print("Performing quick sort on list = ",*arr[low:high+1],f" with low = {low} and high = {high}")
-        # print("\n","+"*50,"\n")
-        # print(f"\nlow ({low}) < high ({high})\n")
         print("\nFinding the pivot  of list = ",*arr[low:high+1],f" with low = {low},and high = {high}")
         pivot = partition(arr, low, high)
         print()
         print(f"The pivot is {arr[pivot]} at position {pivot} in the list ", *arr)
-        
-        # print("\n","."*50,"\n")
-        # print(f"Performing quick sort with list = {arr} , low = {low} and high = {pivot-1}")
         quick_sort(arr, low, pivot-1)
-        # print("\n","."*50,"\n")
-        # print(f"Performing quick sort with list = {arr} , low = {pivot+1} and high = {high}")
         quick_sort(arr, pivot+1, high)
-        # print("\n","+"*50,"\n")
     
 
 print("\n","-"*70,"\n")
 
 # Taking the list from the user
-# print("\n","."*50,"\n")
 size = int(input("Enter the size of the list: "))
 my_list = []
 for i in range(size):
     my_list.append(int(input(f"Enter the element at position {i + 1}: ")))
+    
 print("Original List:", *my_list)
+
 quick_sort(my_list, 0, len(my_list)-1)
+
 print("\n","-"*70,"\n")
 
 print("Finally, \nSorted List:", *my_list)
