@@ -1,4 +1,3 @@
-import pytest
 import os
 import sys
 
@@ -37,6 +36,3 @@ def test_quick_sort():
     arr5 = [1]
     quick_sort(arr5, 0, len(arr5) - 1)
     assert arr5 == [1]
-
-if __name__ == "__main__":
-    pytest.main()
