@@ -69,7 +69,7 @@ def quick_sort(arr, low, high):
                  """)
         st.write(*arr[low:high+1])
         st.write(f" \n \nwith low = {low} and high = {high}")
-        st.write("\nFinding the pivot  of list","\n*",*arr[low:high+1],f"\n* with low = {low} , and high = {high}")
+        st.write("\nFinding the pivot  of list \n\n",*arr[low:high+1],f"\n\n with low = {low} , and high = {high}")
         pivot = partition(arr, low, high)
         st.write()
         st.write(f"The pivot is {arr[pivot]} at position {pivot} in the list \n\n", *arr)
