@@ -29,7 +29,7 @@ def partition(arr, low, high):
     right = high
     done = False
     while not done:
-        st.write("\n","~"*30,f"\nPivot = {pivot}")
+        st.write("\n","~"*30,f"\nPivot = {pivot}"f"\n\nleft = {left} and right=  {right}")
         st.write("\n","~"*30,f"\nleft = {left} and right=  {right}")
         while left <= right and arr[left] <= pivot:
             st.write()
