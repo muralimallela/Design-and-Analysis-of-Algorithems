@@ -1,18 +1,4 @@
 import streamlit as st
-# Write custom CSS
-custom_css = """
-<style>
-/* Decrease padding for mobile view */
-@media (max-width: 680px) {
-    #quick-sort{
-        padding: 0px;
-    }
-}
-</style>
-"""
-
-# Inject custom CSS
-st.markdown(custom_css, unsafe_allow_html=True)
 
 # Swapping
 def swap(arr, i, j):
@@ -29,8 +15,8 @@ def partition(arr, low, high):
     right = high
     done = False
     while not done:
-        st.write("\n","~"*30,f"\nPivot = {pivot}"f"\n\nleft = {left} and right=  {right}")
-        #st.write("\n","~"*30,f"\nleft = {left} and right=  {right}")
+        st.write("\n","~"*30,f"\nPivot = {pivot}")
+        st.write(f"\nleft = {left} and right=  {right}")
         while left <= right and arr[left] <= pivot:
             st.write()
             st.write(f"{arr[left]} <= {pivot}   \n Increasing the left i.e., {left+1}")
@@ -80,18 +66,26 @@ if __name__ == "__main__":
     st.title("Quick Sort")
     st.write("")
     # Taking the list from the user
-    size = st.number_input("Enter the size of the list: ", step=1,value = 0)
+    # size = st.number_input("Enter the size of the list: ", step=1,value = 0)
     my_list = []
-    for i in range(size):
-        my_list.append(st.number_input(f"Enter the element at position {i}: ",value = 0))
+    st.write("Enter multiple values, separated by spaces:")
+
+    values = st.text_input("Enter values")
+
+    if values:
+        my_list.extend(values.split())
+    
+    list2 = [int(item) for item in my_list]
+    # for i in range(size):
+    #     my_list.append(st.number_input(f"Enter the element at position {i}: ",value = 0))
 
     st.write("\n","-"*70,"\n")   
-    st.write("Original List:\n","\n",*my_list)
+    st.write("Original List:\n","\n",*list2)
 
-    quick_sort(my_list, 0, len(my_list)-1)
+    quick_sort(list2, 0, len(my_list)-1)
 
     st.write("\n","-"*70,"\n")
     st.write("Finally,"," \nSorted List:")
-    st.write(*my_list)
+    st.write(list2)
     st.write("\n","*"*70,"\n\t\t\t","\n"*20,"\n\t\t\t"," MURALI KRISHNA MALLELA\n","*"*70)
  
