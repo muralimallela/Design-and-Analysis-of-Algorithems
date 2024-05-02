@@ -86,6 +86,6 @@ if __name__ == "__main__":
 
     st.write("\n","-"*70,"\n")
     st.write("Finally,"," \nSorted List:")
-    st.write(list2)
+    st.write(*list2)
     st.write("\n","*"*70,"\n\t\t\t","\n"*20,"\n\t\t\t"," MURALI KRISHNA MALLELA\n","*"*70)
  
